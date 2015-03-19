@@ -58,8 +58,8 @@ if [ "x${LOOPROOT}" != "x" ]; then
 		_log_msg "... configuring done\n"
 		set -e
 
-		_log_msg "Starting wget -P ${lprootp} -c ${LOOPGET} ...\n"
-		/usr/bin/wget -P ${lprootp} -c ${LOOPGET} || {
+		_log_msg "Starting wget -P ${lprootp} ${LOOPGET} ...\n"
+		/usr/bin/wget -P ${lprootp} ${LOOPGET} || {
 			rc=$?
 			log_failure_msg "wget failed ${rc}"
 			exit ${rc}
