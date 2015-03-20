@@ -20,7 +20,7 @@ if [ "x${LOOPROOT}" != "x" ]; then
 	mkdir -p ${lprootp}
 
 	_log_msg "Mounting ${LOOPROOT} to ${lprootp} ...\n"
-	/usr/bin/mount ${LOOPROOT} ${lprootp} || {
+	/usr/bin/mount -t ntfs-3g -o remove_hiberfile ${LOOPROOT} ${lprootp} || {
 		rc=$?
 		log_failure_msg "mounting failed ${rc}"
 		exit ${rc}
