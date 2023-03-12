@@ -30,6 +30,9 @@ systemctl mask apparmor.service
 systemctl mask networking.service
 systemctl enable lmio-networking.service
 
+apt-get remove -y firmware-netronome
+
+localepurge
 rm /var/lib/apt/lists/*
 
 update-grub
