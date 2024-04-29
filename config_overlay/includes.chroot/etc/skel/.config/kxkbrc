@@ -1,6 +1,6 @@
 [Layout]
 DisplayNames=,
-LayoutList=us,lt
+LayoutList=us
 LayoutLoopCount=-1
 Model=pc101
 Options=grp:alt_shift_toggle
